@@ -1043,6 +1043,26 @@ td {
         11px 18px;
     font-size: 13px;
 }
+
+.input-panel {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #76531f transparent;
+}
+
+.number-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.function-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+table {
+    min-width: 520px;
+}
+
+
 /* responsive */
 
 @media (max-width: 1050px) {
@@ -1207,5 +1227,25 @@ td {
     }
     .tolerance-input > input {
         padding-right: 34px;
+    }
+}
+
+@media (max-width: 700px) {
+    .number-fields {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .function-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .number-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .function-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }

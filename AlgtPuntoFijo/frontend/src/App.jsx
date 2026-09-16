@@ -389,7 +389,7 @@ function App() {
 
                     {!resultado && (
                         <div className="empty-state">
-                            <div className="empty-icon">∫</div>
+                            <div className="empty-icon">xₙ</div>
                             <h3>Sin resultados todavía</h3>
                             <p>Ingresa la función g(x), selecciona el valor inicial p₀ y calcula el punto fijo.</p>
                         </div>
@@ -403,7 +403,7 @@ function App() {
 
                                     <strong>
                                         {formatoDecimal(
-                                            resultado.punto_fijo,
+                                            resultado.puntoFijo,
                                             12
                                         )}
                                     </strong>
