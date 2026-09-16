@@ -1,0 +1,145 @@
+@media (max-width: 1050px) {
+    .result-card {
+        padding: 11px;
+    }
+
+    .result-card strong {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 850px) {
+    html,
+    body,
+    #root {
+        overflow-y: auto;
+        scrollbar-width: none;
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar,
+    #root::-webkit-scrollbar {
+        display: none;
+    }
+
+    .app {
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+    }
+
+    .workspace {
+        overflow: visible;
+        grid-template-columns: 1fr;
+    }
+
+    .panel {
+        height: auto;
+    }
+
+    .input-panel {
+        overflow: visible;
+    }
+
+    .results-panel {
+        min-height: min(650px, 82vh);
+        overflow: hidden;
+    }
+
+    .empty-state {
+        min-height: 280px;
+    }
+
+    .table-container {
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 700px) {
+    .math-keyboard {
+        grid-template-columns: 1fr;
+    }
+
+    .number-fields {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .result-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .results-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .result-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .result-view-button {
+        flex: 1;
+    }
+}
+
+@media (max-width: 520px) {
+    .app {
+        padding: 10px;
+    }
+
+    .panel {
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+    .topbar h1 {
+        font-size: 27px;
+    }
+
+    .number-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .result-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .basic-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .function-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .results-panel {
+        min-height: min(700px, 88vh);
+    }
+}
+
+@media (max-width: 380px) {
+    .app {
+        padding: 7px;
+    }
+
+    .panel {
+        padding: 11px;
+    }
+
+    .function-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .keyboard-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .tolerance-stepper {
+        width: 27px;
+    }
+
+    .tolerance-input > input {
+        padding-right: 34px;
+    }
+}

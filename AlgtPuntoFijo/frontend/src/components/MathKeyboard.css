@@ -1,0 +1,86 @@
+.math-keyboard {
+    width: 100%;
+    min-width: 0;
+    margin-top: clamp(6px, 1.3vh, 16px);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(7px, 1vw, 13px);
+}
+
+.keyboard-title {
+    display: block;
+    margin-bottom: clamp(3px, 0.6vh, 7px);
+    color: #888888;
+    font-size: clamp(9px, 1.2vh, 11px);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.keyboard-grid {
+    min-width: 0;
+    display: grid;
+    gap: clamp(3px, 0.6vh, 7px);
+}
+
+.basic-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.function-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.key {
+    width: 100%;
+    min-width: 0;
+    min-height: clamp(28px, 4vh, 40px);
+    padding: clamp(2px, 0.5vh, 5px);
+    border: 1px solid #353535;
+    border-radius: 9px;
+    background: #232323;
+    color: #ededed;
+    font-size: clamp(10px, 1.5vh, 14px);
+    font-weight: 600;
+    transition: background 120ms, transform 80ms, border-color 120ms, color 120ms;
+}
+
+.key:hover {
+    background: #2b2b2b;
+    border-color: #4a4a4a;
+}
+
+.key:active {
+    transform: scale(0.96);
+}
+
+.variable-key {
+    color: #ffb340;
+}
+
+.function-key {
+    background: #1c1c1c;
+    color: #ffb340;
+    border-color: #4a3920;
+}
+
+.function-key:hover {
+    background: #26211a;
+    border-color: #7a5620;
+    color: #ffc76d;
+}
+
+.keyboard-controls {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(3px, 0.6vh, 7px);
+    margin-top: clamp(3px, 0.6vh, 7px);
+}
+
+.control-key {
+    color: #ffbf5a;
+}
+
+.clear-key {
+    color: #ff7b70;
+}

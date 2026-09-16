@@ -1,3 +1,5 @@
+import "./MathKeyboard.css";
+
 const numeros = [
     { texto: "7", valor: "7", modo: "after" },
     { texto: "8", valor: "8", modo: "after" },
