@@ -400,6 +400,10 @@ input[type="number"] {
         color 120ms;
 }
 
+.variable-key {
+    color: #ffb340;
+}
+
 .key:hover {
     background: #2b2b2b;
     border-color: #4a4a4a;

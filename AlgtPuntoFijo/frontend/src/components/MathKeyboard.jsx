@@ -13,7 +13,7 @@ const numeros = [
     { texto: "−", valor: "-", modo: "after" },
     { texto: "0", valor: "0", modo: "after" },
     { texto: ".", valor: ".", modo: "after" },
-    { texto: "𝑥", valor: "x", modo: "after" },
+    { texto: "𝑥", valor: "x", modo: "after", tipo: "variable" },
     { texto: "+", valor: "+", modo: "after" }
 ];
 
@@ -48,7 +48,7 @@ function MathKeyboard({ insertar, borrar, limpiar }) {
 
                 <div className="keyboard-grid basic-grid">
                     {numeros.map((tecla) => (
-                        <button key={tecla.texto} type="button" className="key" onMouseDown={conservarFoco} onClick={() => insertar(tecla.valor, tecla.modo)}>
+                        <button key={tecla.texto} type="button" className={`key ${tecla.texto === "𝑥" ? "variable-key" : ""}`} onMouseDown={conservarFoco} onClick={() => insertar(tecla.valor, tecla.modo)}>
                             {tecla.texto}
                         </button>
                     ))}

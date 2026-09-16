@@ -222,7 +222,7 @@ const MathExpressionField = forwardRef(function MathExpressionField({ onChange }
             campo.letterShapeStyle = "tex";
             campo.inlineShortcutTimeout = 0;
 
-            campo.placeholder = "∛(x - 1)";
+            campo.placeholder = "x^n - bx + c";
             campo.placeholderSymbol = "▢";
 
             campo.inlineShortcuts = {
