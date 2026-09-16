@@ -1,17 +1,21 @@
 from pathlib import Path
 import webview
-from metodos.errores import calcular_errores
+
+from metodos.puntoFijo import puntoFijo
+
 
 class API:
-    def calcular_errores(
+    def calcular_punto_fijo(
         self,
-        valor_real,
-        valor_aproximado
+        expresion,
+        p_inicial,
+        tolerancia
     ):
         try:
-            resultado = calcular_errores(
-                valor_real,
-                valor_aproximado
+            resultado = puntoFijo(
+                expresion,
+                p_inicial,
+                tolerancia
             )
 
             return {
@@ -24,6 +28,7 @@ class API:
                 "ok": False,
                 "error": str(error)
             }
+
 
 def iniciar_aplicacion():
     ruta_base = Path(
@@ -40,16 +45,17 @@ def iniciar_aplicacion():
     api = API()
 
     webview.create_window(
-        title="Cálculo de Errores",
+        title="Método de Punto Fijo",
         url=str(index),
         js_api=api,
-        width=1100,
-        height=720,
-        min_size=(820, 620),
+        width=1200,
+        height=800,
+        min_size=(900, 650),
         resizable=True
     )
 
     webview.start()
+
 
 if __name__ == "__main__":
     iniciar_aplicacion()
