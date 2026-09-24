@@ -14,6 +14,9 @@ const IDENTIFICADORES_PERMITIDOS =
         "sin",
         "cos",
         "tan",
+        "asin",
+        "acos",
+        "atan",
         "ln",
         "log",
         "sqrt",
@@ -197,6 +200,15 @@ const MathExpressionField =
 
                         campo.inlineShortcuts = {
                             ...campo.inlineShortcuts,
+                            
+                            asin:
+                                "\\operatorname{asin}\\left(#?\\right)",
+
+                            acos:
+                                "\\operatorname{acos}\\left(#?\\right)",
+
+                            atan:
+                                "\\operatorname{atan}\\left(#?\\right)",
 
                             sin:
                                 "\\sin\\left(#?\\right)",
@@ -224,6 +236,7 @@ const MathExpressionField =
 
                             pi:
                                 "\\pi"
+                            
                         };
 
                         /*teclado fisico*/

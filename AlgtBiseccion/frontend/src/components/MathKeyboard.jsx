@@ -86,6 +86,27 @@ const numeros = [
 
 const funciones = [
     {
+        texto: "sin⁻¹",
+        valor:
+            "\\operatorname{asin}\\left(#?\\right)",
+        modo:
+            "placeholder"
+    },
+    {
+        texto: "cos⁻¹",
+        valor:
+            "\\operatorname{acos}\\left(#?\\right)",
+        modo:
+            "placeholder"
+    },
+    {
+        texto: "tan⁻¹",
+        valor:
+            "\\operatorname{atan}\\left(#?\\right)",
+        modo:
+            "placeholder"
+    },
+    {
         texto: "sin",
         valor:
             "\\sin\\left(#?\\right)",

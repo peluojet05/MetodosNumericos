@@ -13,6 +13,9 @@ const IDENTIFICADORES_PERMITIDOS = new Set([
     "sin",
     "cos",
     "tan",
+    "asin",
+    "acos",
+    "atan",
     "ln",
     "log",
     "sqrt",
@@ -231,11 +234,14 @@ const MathExpressionField = forwardRef(function MathExpressionField({ onChange }
                 sen: "\\sin\\left(#?\\right)",
                 cos: "\\cos\\left(#?\\right)",
                 tan: "\\tan\\left(#?\\right)",
+                asin: "\\operatorname{asin}\\left(#?\\right)",
+                acos: "\\operatorname{acos}\\left(#?\\right)",
+                atan: "\\operatorname{atan}\\left(#?\\right)",
                 ln: "\\ln\\left(#?\\right)",
                 log: "\\log\\left(#?\\right)",
                 sqrt: "\\sqrt{#?}",
                 abs: "\\left|#?\\right|",
-                pi: "\\pi"
+                pi: "\\pi",
             };
 
             manejarTeclado = (evento) => {
